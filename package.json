@@ -1,0 +1,37 @@
+{
+    "name": "signal-bot",
+    "version": "1.0.0",
+    "description": "Connect TradingView signals with Binance trading platform",
+    "main": "index.js",
+    "scripts": {
+        "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+        "start:backend": "cd backend && npm start",
+        "start:frontend": "cd frontend && npm start",
+        "install:all": "npm install && npm run install:backend && npm run install:frontend",
+        "install:backend": "cd backend && npm install",
+        "install:frontend": "cd frontend && npm install",
+        "build": "npm run build:frontend",
+        "build:frontend": "cd frontend && npm run build",
+        "test": "concurrently \"npm run test:backend\" \"npm run test:frontend\"",
+        "test:backend": "cd backend && npm test",
+        "test:frontend": "cd frontend && npm test",
+        "docker:up": "docker-compose -f docker/docker-compose.yml up -d",
+        "docker:down": "docker-compose -f docker/docker-compose.yml down"
+    },
+    "keywords": [
+        "tradingview",
+        "binance",
+        "trading",
+        "bot",
+        "signals",
+        "webhook"
+    ],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^7.6.0"
+    },
+    "dependencies": {
+        "ajv": "^8.0.0"
+    }
+}

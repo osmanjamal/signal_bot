@@ -1,0 +1,8 @@
+npm install concurrently
+cd backend
+npm install express mongoose jsonwebtoken bcryptjs cors dotenv axios crypto-js helmet winston uuid joi compression morgan node-binance-api express-rate-limit
+npm install --save-dev nodemon jest supertest
+cd frontend
+npm install react react-dom react-router-dom react-redux redux redux-thunk @material-ui/core @material-ui/icons @material-ui/lab axios chart.js react-chartjs-2 react-copy-to-clipboard styled-components
+npm run install:all
+npm run install:all
