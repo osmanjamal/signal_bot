@@ -59,6 +59,8 @@ export const getCurrentUser = async () => {
  */
 export const logoutUser = () => {
   localStorage.removeItem(config.tokenKey);
+  // Force page reload to clear any in-memory state
+  window.location.href = '/login';
 };
 
 /**
@@ -67,6 +69,14 @@ export const logoutUser = () => {
  */
 export const isAuthenticated = () => {
   return !!localStorage.getItem(config.tokenKey);
+};
+
+/**
+ * Get auth token
+ * @returns {String|null} - Auth token
+ */
+export const getToken = () => {
+  return localStorage.getItem(config.tokenKey);
 };
 
 /**

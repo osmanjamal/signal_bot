@@ -12,7 +12,7 @@ import {
   InputAdornment,
   FormControlLabel,
   Switch,
-  Divider,
+  // Removing unused Divider to fix ESLint warning
   makeStyles
 } from '@material-ui/core';
 import { Add as AddIcon } from '@material-ui/icons';
